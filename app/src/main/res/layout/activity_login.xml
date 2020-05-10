@@ -1,0 +1,193 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:paddingBottom="50dp">
+
+    <TextView
+        android:id="@+id/loading_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/signing_in"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="24sp"
+        android:translationZ="4dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/loading_progressBar" />
+
+    <ProgressBar
+        android:id="@+id/loading_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="@android:integer/config_shortAnimTime"
+        android:theme="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:translationZ="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/bRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <View
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="3dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:text="@string/register"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/text_easy2"
+        app:layout_constraintStart_toEndOf="@+id/text_easy2"
+        app:layout_constraintTop_toTopOf="@+id/text_easy2" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_easy2"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <TextView
+        android:id="@+id/text_easy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/sign_up_with_google"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/text_easy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/transparent"
+        android:text="@string/don_t_you_have_a_google_account"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/baseline_account_balance_wallet_24"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/username" />
+
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:minLines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:text="@string/password"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:minLines="1"
+            android:maxLines="1"
+            android:inputType="textPassword" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            >
+
+            <Button
+                android:id="@+id/bLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="10dp" />
+        </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

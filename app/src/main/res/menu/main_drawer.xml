@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_group_views"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_category_gray_24dp"
+            android:title="@string/categories" />
+
+        <item
+            android:id="@+id/invite_friend"
+            android:icon="@drawable/ic_action_name"
+            android:title="@string/invite_friend" />
+
+    </group>
+
+    <group
+        android:id="@+id/nav_group_additional"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/about" />
+    </group>
+</menu>
